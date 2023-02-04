@@ -1,0 +1,473 @@
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_title",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_description",
+				"type": "string"
+			}
+		],
+		"name": "createInnovation",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "_uniqueInnovationHash",
+				"type": "bytes32"
+			}
+		],
+		"name": "deleteInnovation",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "_uniqueInnovationHash",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "string",
+				"name": "_title",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_description",
+				"type": "string"
+			}
+		],
+		"name": "editInnovation",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "endInnovationProcess",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "bytes32",
+						"name": "uniqueInnovationHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "votingCount",
+						"type": "uint256"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "kNumber",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "studentAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "bool",
+								"name": "voted",
+								"type": "bool"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "votedInnovationHash",
+								"type": "bytes32"
+							}
+						],
+						"internalType": "struct FhwsInnovationsContract.Student",
+						"name": "creator",
+						"type": "tuple"
+					},
+					{
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					}
+				],
+				"internalType": "struct FhwsInnovationsContract.Innovation[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getAllInnovations",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "bytes32",
+						"name": "uniqueInnovationHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "votingCount",
+						"type": "uint256"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "kNumber",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "studentAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "bool",
+								"name": "voted",
+								"type": "bool"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "votedInnovationHash",
+								"type": "bytes32"
+							}
+						],
+						"internalType": "struct FhwsInnovationsContract.Student",
+						"name": "creator",
+						"type": "tuple"
+					},
+					{
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					}
+				],
+				"internalType": "struct FhwsInnovationsContract.Innovation[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getContractOwner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "studentAddress",
+				"type": "address"
+			}
+		],
+		"name": "getInnovationsOfStudent",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "bytes32",
+						"name": "uniqueInnovationHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "votingCount",
+						"type": "uint256"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "kNumber",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "studentAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "bool",
+								"name": "voted",
+								"type": "bool"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "votedInnovationHash",
+								"type": "bytes32"
+							}
+						],
+						"internalType": "struct FhwsInnovationsContract.Student",
+						"name": "creator",
+						"type": "tuple"
+					},
+					{
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					}
+				],
+				"internalType": "struct FhwsInnovationsContract.Innovation[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getKNumberOfStudentAddress",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "studentAddress",
+				"type": "address"
+			}
+		],
+		"name": "getStudent",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "kNumber",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "studentAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "voted",
+						"type": "bool"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "votedInnovationHash",
+						"type": "bytes32"
+					}
+				],
+				"internalType": "struct FhwsInnovationsContract.Student",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getWinnerOfInnovationProcess",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "bytes32",
+						"name": "uniqueInnovationHash",
+						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "votingCount",
+						"type": "uint256"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "kNumber",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "studentAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "bool",
+								"name": "voted",
+								"type": "bool"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "votedInnovationHash",
+								"type": "bytes32"
+							}
+						],
+						"internalType": "struct FhwsInnovationsContract.Student",
+						"name": "creator",
+						"type": "tuple"
+					},
+					{
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					}
+				],
+				"internalType": "struct FhwsInnovationsContract.Innovation[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_kNumber",
+				"type": "string"
+			}
+		],
+		"name": "initialRegistrationOfStudent",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "innovationProcessFinished",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "restartInnovationProcess",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_kNumber",
+				"type": "string"
+			}
+		],
+		"name": "studentAlreadyRegistred",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "studentUsesInitialRegistredAddress",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "_uniqueInnovationHash",
+				"type": "bytes32"
+			}
+		],
+		"name": "unvote",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "_uniqueInnovationHash",
+				"type": "bytes32"
+			}
+		],
+		"name": "vote",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
